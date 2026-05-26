@@ -11,7 +11,10 @@
 
   <title>EnvoBypass</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -26,18 +29,19 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-header">
+    <div class="logo-wrap">
 
       <img
         src="assets/logo.png"
         class="logo"
+        alt="Logo"
       >
 
       <div>
 
         <h2>EnvoBypass</h2>
 
-        <p class="sidebar-subtitle">
+        <p>
           Modern Platform
         </p>
 
@@ -45,7 +49,7 @@
 
     </div>
 
-    <div class="sidebar-links">
+    <nav class="nav-links">
 
       <a
         href="index.html"
@@ -58,7 +62,7 @@
         Settings
       </a>
 
-    </div>
+    </nav>
 
   </aside>
 
@@ -68,26 +72,26 @@
 
     <!-- HERO -->
 
-    <section class="hero-card">
+    <section class="hero">
 
-      <div class="hero-left">
+      <div class="hero-text">
 
-        <div class="hero-badge">
-          ENVOBYPASS PLATFORM
+        <div class="hero-tag">
+          ENVOBYPASS
         </div>
 
         <h1>
 
-          Smooth Modern
+          Chill Modern
           <span>Dashboard</span>
 
         </h1>
 
         <p>
 
-          Premium clean dashboard with
-          customization support and future
-          Discord webhook integrations.
+          Clean premium interface with
+          smooth controls, customizable
+          settings, and future webhook support.
 
         </p>
 
@@ -95,29 +99,41 @@
 
       <!-- STATUS -->
 
-      <div class="hero-status">
+      <div class="status-panel">
 
-        <div class="status-box">
+        <div class="status-item">
 
-          <span>Platform</span>
+          <span>
+            Platform
+          </span>
 
-          <strong>Online</strong>
-
-        </div>
-
-        <div class="status-box">
-
-          <span>API</span>
-
-          <strong>Stable</strong>
+          <strong>
+            Online
+          </strong>
 
         </div>
 
-        <div class="status-box">
+        <div class="status-item">
 
-          <span>Discord Webhooks</span>
+          <span>
+            API
+          </span>
 
-          <strong>Coming Soon</strong>
+          <strong>
+            Stable
+          </strong>
+
+        </div>
+
+        <div class="status-item">
+
+          <span>
+            Webhooks
+          </span>
+
+          <strong>
+            Soon
+          </strong>
 
         </div>
 
@@ -127,17 +143,17 @@
 
     <!-- URL TOOL -->
 
-    <section class="tool-card">
+    <section class="tool-box">
 
       <h2>
         URL Tool
       </h2>
 
       <p>
-        Paste your URL below
+        Paste a URL below
       </p>
 
-      <div class="tool-input-wrap">
+      <div class="tool-input">
 
         <input
           type="text"
@@ -145,17 +161,15 @@
           placeholder="https://example.com"
         >
 
-        <button onclick="analyzeUrl()">
+        <button onclick="runTool()">
           Analyze
         </button>
 
       </div>
 
-      <!-- RESULT -->
-
       <div
-        class="result-box"
-        id="resultBox"
+        class="output-box"
+        id="outputBox"
       >
 
         Waiting for URL...
@@ -164,13 +178,13 @@
 
     </section>
 
-    <!-- FEATURES -->
+    <!-- CARDS -->
 
-    <section class="cards-grid">
+    <section class="card-grid">
 
-      <div class="info-card">
+      <div class="card">
 
-        <div class="card-icon">
+        <div class="icon">
           ⚡
         </div>
 
@@ -180,14 +194,14 @@
 
         <p>
           Smooth optimized dashboard
-          experience.
+          performance.
         </p>
 
       </div>
 
-      <div class="info-card">
+      <div class="card">
 
-        <div class="card-icon">
+        <div class="icon">
           🎨
         </div>
 
@@ -196,19 +210,19 @@
         </h3>
 
         <p>
-          Future themes and UI
-          customization support.
+          Future UI customization
+          settings support.
         </p>
 
       </div>
 
-      <div class="info-card">
+      <div class="card">
 
-        <div class="coming-soon">
+        <div class="coming">
           COMING SOON
         </div>
 
-        <div class="card-icon">
+        <div class="icon">
           🤖
         </div>
 
@@ -217,8 +231,8 @@
         </h3>
 
         <p>
-          Bot webhook integration
-          arriving soon.
+          Webhook integrations arriving
+          in a future update.
         </p>
 
       </div>
@@ -227,40 +241,38 @@
 
   </main>
 
-  <!-- SCRIPT -->
-
   <script>
 
-    function analyzeUrl() {
+    function runTool() {
 
-      const input =
+      const url =
         document.getElementById(
           "urlInput"
         ).value;
 
-      const result =
+      const output =
         document.getElementById(
-          "resultBox"
+          "outputBox"
         );
 
-      if(input.trim() === "") {
+      if(url.trim() === "") {
 
-        result.innerHTML =
+        output.innerHTML =
           "Please enter a URL.";
 
         return;
       }
 
-      result.innerHTML = `
+      output.innerHTML = `
 
-        <strong>URL Detected:</strong>
+        <strong>URL:</strong>
         <br><br>
 
-        ${input}
+        ${url}
 
         <br><br>
 
-        Analysis system connected.
+        Analysis system active.
 
       `;
 
