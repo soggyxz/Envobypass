@@ -3,6 +3,7 @@
 <head>
 
   <meta charset="UTF-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
@@ -13,17 +14,6 @@
   <link rel="stylesheet" href="styles.css">
 
   <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
@@ -32,127 +22,266 @@
 
 <body>
 
-  <div class="bg-overlay"></div>
+  <!-- SIDEBAR -->
 
-  <nav>
+  <aside class="sidebar">
 
-    <div class="logo">
+    <div class="sidebar-logo-wrap">
 
       <img
         src="assets/logo.png"
-        class="logo-img"
+        class="sidebar-logo"
       >
 
-      <span>EnvoBypass</span>
+      <div class="sidebar-title">
+        EnvoBypass
+      </div>
 
     </div>
 
-    <div class="nav-links">
+    <div class="sidebar-links">
 
-      <a href="#">Home</a>
+      <a href="#">Dashboard</a>
+
+      <a href="#">Analytics</a>
+
       <a href="#">Features</a>
-      <a href="pages/login.html">Login</a>
-      <a href="pages/settings.html">Settings</a>
+
+      <a href="#">Patch Notes</a>
+
+      <a href="pages/settings.html">
+        Settings
+      </a>
+
+      <a href="pages/login.html">
+        Login
+      </a>
 
     </div>
 
-  </nav>
+  </aside>
 
-  <main>
+  <!-- MAIN -->
 
-    <div class="hero-badge">
-      Modern URL Utility Platform
-    </div>
+  <main class="main">
 
-    <h1>
-      Fast.
-      Secure.
-      <span>Modern.</span>
-    </h1>
+    <!-- HERO -->
 
-    <p class="subtitle">
-      Advanced URL tools with premium UI and
-      lightning-fast performance.
-    </p>
+    <section class="hero">
 
-    <div class="search-box">
+      <div class="hero-left">
 
-      <input
-        id="urlInput"
-        type="text"
-        placeholder="Paste your URL here..."
-      >
+        <div class="hero-badge">
+          PRIVATE ACCESS PLATFORM
+        </div>
 
-      <button onclick="resolveURL()">
-        Analyze URL
-      </button>
+        <h1>
 
-    </div>
+          Next Generation
+          <span class="hero-gradient">
+            Link Platform
+          </span>
 
-    <div id="result" class="result"></div>
+        </h1>
 
-    <section class="stats">
+        <p>
 
-      <div class="stat-card">
-        <h2>99.9%</h2>
-        <p>Uptime</p>
+          Premium modern dashboard experience
+          with advanced tooling, fast APIs,
+          clean design, and powerful utilities.
+
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="pages/signup.html"
+            class="primary-btn"
+          >
+            Get Started
+          </a>
+
+          <a
+            href="pages/login.html"
+            class="secondary-btn"
+          >
+            Login
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="stat-card">
-        <h2>24/7</h2>
-        <p>API Access</p>
-      </div>
+      <!-- HERO PANEL -->
 
-      <div class="stat-card">
-        <h2>Fast</h2>
-        <p>Performance</p>
+      <div class="hero-panel">
+
+        <div class="panel-title">
+          Live Status
+        </div>
+
+        <div class="panel-card">
+
+          <span>System</span>
+
+          <strong>Online</strong>
+
+        </div>
+
+        <div class="panel-card">
+
+          <span>API</span>
+
+          <strong>Operational</strong>
+
+        </div>
+
+        <div class="panel-card">
+
+          <span>Latency</span>
+
+          <strong>24ms</strong>
+
+        </div>
+
       </div>
 
     </section>
+
+    <!-- FEATURES -->
 
     <section class="features">
 
       <div class="feature-card">
 
-        <div class="feature-icon">⚡</div>
+        <div class="feature-icon">
+          ⚡
+        </div>
 
         <h3>Fast API</h3>
 
         <p>
-          Lightning fast URL analysis and redirect tracing.
+          Ultra fast infrastructure with
+          lightning quick performance.
         </p>
 
       </div>
 
       <div class="feature-card">
 
-        <div class="feature-icon">🛡️</div>
+        <div class="feature-icon">
+          🔒
+        </div>
 
-        <h3>Safe Analysis</h3>
+        <h3>Secure Platform</h3>
 
         <p>
-          Analyze links securely with modern tooling.
+          Modern secure architecture with
+          premium dashboard protection.
         </p>
 
       </div>
 
       <div class="feature-card">
 
-        <div class="feature-icon">🌐</div>
+        <div class="feature-icon">
+          🌐
+        </div>
 
-        <h3>Metadata Preview</h3>
+        <h3>Global Access</h3>
 
         <p>
-          Instantly preview domains and redirect targets.
+          Access your dashboard anywhere
+          with responsive modern design.
         </p>
+
+      </div>
+
+    </section>
+
+    <!-- PATCH NOTES -->
+
+    <section class="patchnotes">
+
+      <h2 class="patchnotes-title">
+        Latest Updates
+      </h2>
+
+      <!-- PATCH CARD -->
+
+      <div class="patch-card">
+
+        <div class="patch-version">
+
+          <h3>v1.2.0</h3>
+
+          <span class="patch-date">
+            May 2026
+          </span>
+
+        </div>
+
+        <ul class="patch-list">
+
+          <li>
+            Added brand new premium UI
+          </li>
+
+          <li>
+            Added patch notes system
+          </li>
+
+          <li>
+            Added login & signup pages
+          </li>
+
+          <li>
+            Added settings dashboard
+          </li>
+
+          <li>
+            Improved mobile support
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- PATCH CARD -->
+
+      <div class="patch-card">
+
+        <div class="patch-version">
+
+          <h3>v1.1.0</h3>
+
+          <span class="patch-date">
+            April 2026
+          </span>
+
+        </div>
+
+        <ul class="patch-list">
+
+          <li>
+            Improved API response speed
+          </li>
+
+          <li>
+            Added dashboard panels
+          </li>
+
+          <li>
+            Updated homepage layout
+          </li>
+
+        </ul>
 
       </div>
 
     </section>
 
   </main>
-
-  <script src="app.js"></script>
 
 </body>
 </html>
