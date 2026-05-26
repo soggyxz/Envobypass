@@ -82,7 +82,7 @@
 
         <h1>
 
-          Chill Modern
+          Smooth Modern
           <span>Dashboard</span>
 
         </h1>
@@ -146,7 +146,7 @@
     <section class="tool-box">
 
       <h2>
-        URL Tool
+        URL Analyzer
       </h2>
 
       <p>
@@ -241,40 +241,130 @@
 
   </main>
 
+  <!-- SCRIPT -->
+
   <script>
 
-    function runTool() {
+    async function runTool() {
 
-      const url =
+      const input =
         document.getElementById(
           "urlInput"
-        ).value;
+        );
 
       const output =
         document.getElementById(
           "outputBox"
         );
 
-      if(url.trim() === "") {
+      const url =
+        input.value.trim();
 
-        output.innerHTML =
-          "Please enter a URL.";
+      if(url === "") {
+
+        output.innerHTML = `
+          Please enter a URL.
+        `;
+
+        return;
+      }
+
+      try {
+
+        new URL(url);
+
+      } catch {
+
+        output.innerHTML = `
+          Invalid URL format.
+        `;
 
         return;
       }
 
       output.innerHTML = `
-
-        <strong>URL:</strong>
-        <br><br>
-
-        ${url}
-
-        <br><br>
-
-        Analysis system active.
-
+        Analyzing URL...
       `;
+
+      const parsed =
+        new URL(url);
+
+      const domain =
+        parsed.hostname;
+
+      const protocol =
+        parsed.protocol;
+
+      const path =
+        parsed.pathname;
+
+      const secure =
+        protocol === "https:";
+
+      const params =
+        parsed.search || "None";
+
+      setTimeout(() => {
+
+        output.innerHTML = `
+
+          <div class="result-item">
+
+            <strong>Domain:</strong>
+            <br><br>
+
+            ${domain}
+
+          </div>
+
+          <div class="result-item">
+
+            <strong>Protocol:</strong>
+            <br><br>
+
+            ${protocol}
+
+          </div>
+
+          <div class="result-item">
+
+            <strong>Secure:</strong>
+            <br><br>
+
+            ${secure ? "Yes" : "No"}
+
+          </div>
+
+          <div class="result-item">
+
+            <strong>Path:</strong>
+            <br><br>
+
+            ${path || "/"}
+
+          </div>
+
+          <div class="result-item">
+
+            <strong>Parameters:</strong>
+            <br><br>
+
+            ${params}
+
+          </div>
+
+          <div class="result-item">
+
+            <strong>Status:</strong>
+            <br><br>
+
+            URL analyzed successfully.
+
+          </div>
+
+        `;
+
+      }, 1000);
 
     }
 
