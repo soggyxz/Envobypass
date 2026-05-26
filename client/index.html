@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>EnvoBypass</title>
 
   <link rel="stylesheet" href="styles.css">
@@ -11,7 +17,9 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
+
 </head>
+
 <body>
 
   <!-- SIDEBAR -->
@@ -23,21 +31,26 @@
       <img
         src="assets/logo.png"
         class="logo"
-        alt="Logo"
       >
 
       <div>
+
         <h2>EnvoBypass</h2>
+
         <p class="sidebar-subtitle">
           Modern Platform
         </p>
+
       </div>
 
     </div>
 
     <div class="sidebar-links">
 
-      <a href="index.html" class="active">
+      <a
+        href="index.html"
+        class="active"
+      >
         Bypass
       </a>
 
@@ -53,21 +66,207 @@
 
   <main class="main">
 
-    <div class="hero-card">
+    <!-- HERO -->
 
-      <div class="hero-text">
+    <section class="hero-card">
+
+      <div class="hero-left">
 
         <div class="hero-badge">
           ENVOBYPASS PLATFORM
         </div>
 
         <h1>
-          Chill Modern
+
+          Smooth Modern
           <span>Dashboard</span>
+
         </h1>
 
         <p>
-          Clean premium UI with a smoother experience,
-          customizable settings, and future Discord webhook integrations.
+
+          Premium clean dashboard with
+          customization support and future
+          Discord webhook integrations.
+
         </p>
+
+      </div>
+
+      <!-- STATUS -->
+
+      <div class="hero-status">
+
+        <div class="status-box">
+
+          <span>Platform</span>
+
+          <strong>Online</strong>
+
+        </div>
+
+        <div class="status-box">
+
+          <span>API</span>
+
+          <strong>Stable</strong>
+
+        </div>
+
+        <div class="status-box">
+
+          <span>Discord Webhooks</span>
+
+          <strong>Coming Soon</strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- URL TOOL -->
+
+    <section class="tool-card">
+
+      <h2>
+        URL Tool
+      </h2>
+
+      <p>
+        Paste your URL below
+      </p>
+
+      <div class="tool-input-wrap">
+
+        <input
+          type="text"
+          id="urlInput"
+          placeholder="https://example.com"
+        >
+
+        <button onclick="analyzeUrl()">
+          Analyze
+        </button>
+
+      </div>
+
+      <!-- RESULT -->
+
+      <div
+        class="result-box"
+        id="resultBox"
+      >
+
+        Waiting for URL...
+
+      </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="cards-grid">
+
+      <div class="info-card">
+
+        <div class="card-icon">
+          ⚡
+        </div>
+
+        <h3>
+          Fast
+        </h3>
+
+        <p>
+          Smooth optimized dashboard
+          experience.
+        </p>
+
+      </div>
+
+      <div class="info-card">
+
+        <div class="card-icon">
+          🎨
+        </div>
+
+        <h3>
+          Customizable
+        </h3>
+
+        <p>
+          Future themes and UI
+          customization support.
+        </p>
+
+      </div>
+
+      <div class="info-card">
+
+        <div class="coming-soon">
+          COMING SOON
+        </div>
+
+        <div class="card-icon">
+          🤖
+        </div>
+
+        <h3>
+          Discord Webhooks
+        </h3>
+
+        <p>
+          Bot webhook integration
+          arriving soon.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    function analyzeUrl() {
+
+      const input =
+        document.getElementById(
+          "urlInput"
+        ).value;
+
+      const result =
+        document.getElementById(
+          "resultBox"
+        );
+
+      if(input.trim() === "") {
+
+        result.innerHTML =
+          "Please enter a URL.";
+
+        return;
+      }
+
+      result.innerHTML = `
+
+        <strong>URL Detected:</strong>
+        <br><br>
+
+        ${input}
+
+        <br><br>
+
+        Analysis system connected.
+
+      `;
+
+    }
+
+  </script>
+
+</body>
 </html>

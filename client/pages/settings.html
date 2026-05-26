@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-      <a href="settings.html" class="active">
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Settings</title>
+
+  <link
+    rel="stylesheet"
+    href="../styles.css"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="sidebar-header">
+
+      <img
+        src="../assets/logo.png"
+        class="logo"
+      >
+
+      <div>
+
+        <h2>EnvoBypass</h2>
+
+        <p class="sidebar-subtitle">
+          Modern Platform
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="sidebar-links">
+
+      <a href="../index.html">
+        Bypass
+      </a>
+
+      <a
+        href="settings.html"
+        class="active"
+      >
         Settings
       </a>
 
     </div>
 
   </aside>
+
+  <!-- MAIN -->
 
   <main class="main">
 
@@ -16,12 +76,16 @@
       </h1>
 
       <p>
-        Customize your dashboard
+        Customize your experience
       </p>
 
     </div>
 
-    <div class="settings-grid">
+    <!-- SETTINGS GRID -->
+
+    <section class="settings-grid">
+
+      <!-- APPEARANCE -->
 
       <div class="settings-card">
 
@@ -33,7 +97,10 @@
           Theme Accent
         </label>
 
-        <input type="color" value="#8b5cf6">
+        <input
+          type="color"
+          value="#8b5cf6"
+        >
 
         <label>
           Username
@@ -46,7 +113,9 @@
 
       </div>
 
-      <div class="settings-card webhook-settings">
+      <!-- WEBHOOKS -->
+
+      <div class="settings-card">
 
         <div class="coming-soon">
           COMING SOON
@@ -57,8 +126,10 @@
         </h3>
 
         <p>
-          Webhook support and bot integrations
-          will be added in a future update.
+
+          Discord webhook integrations
+          are currently in development.
+
         </p>
 
         <input
@@ -73,7 +144,7 @@
 
       </div>
 
-    </div>
+    </section>
 
   </main>
 
