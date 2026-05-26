@@ -1,33 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZenX</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>EnvoBypass</title>
 
   <link rel="stylesheet" href="styles.css">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
 </head>
+
 <body>
 
-  <div class="container">
+  <div class="bg-overlay"></div>
 
-    <h1>ZenX</h1>
+  <nav>
 
-    <p>Modern URL Utility Platform</p>
+    <div class="logo">
 
-    <input
-      id="urlInput"
-      type="text"
-      placeholder="Paste URL here..."
-    >
+      <img
+        src="assets/logo.png"
+        class="logo-img"
+      >
 
-    <button onclick="resolveURL()">
-      Resolve URL
-    </button>
+      <span>EnvoBypass</span>
 
-    <div id="result"></div>
+    </div>
 
-  </div>
+    <div class="nav-links">
+
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="pages/login.html">Login</a>
+      <a href="pages/settings.html">Settings</a>
+
+    </div>
+
+  </nav>
+
+  <main>
+
+    <div class="hero-badge">
+      Modern URL Utility Platform
+    </div>
+
+    <h1>
+      Fast.
+      Secure.
+      <span>Modern.</span>
+    </h1>
+
+    <p class="subtitle">
+      Advanced URL tools with premium UI and
+      lightning-fast performance.
+    </p>
+
+    <div class="search-box">
+
+      <input
+        id="urlInput"
+        type="text"
+        placeholder="Paste your URL here..."
+      >
+
+      <button onclick="resolveURL()">
+        Analyze URL
+      </button>
+
+    </div>
+
+    <div id="result" class="result"></div>
+
+    <section class="stats">
+
+      <div class="stat-card">
+        <h2>99.9%</h2>
+        <p>Uptime</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>24/7</h2>
+        <p>API Access</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>Fast</h2>
+        <p>Performance</p>
+      </div>
+
+    </section>
+
+    <section class="features">
+
+      <div class="feature-card">
+
+        <div class="feature-icon">⚡</div>
+
+        <h3>Fast API</h3>
+
+        <p>
+          Lightning fast URL analysis and redirect tracing.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="feature-icon">🛡️</div>
+
+        <h3>Safe Analysis</h3>
+
+        <p>
+          Analyze links securely with modern tooling.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="feature-icon">🌐</div>
+
+        <h3>Metadata Preview</h3>
+
+        <p>
+          Instantly preview domains and redirect targets.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
 
   <script src="app.js"></script>
 
